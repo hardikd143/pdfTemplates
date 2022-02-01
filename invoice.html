@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #343434;
+        -webkit-print-color-adjust: exact;
+      }
+
+      img {
+        max-width: 100% !important;
+      }
+      /* @media print {
+          .pagebreak {
+            page-break-after: always;
+          }
+        } */
+    </style>
+  </head>
+  <body
+    style="
+      width: 100% !important;
+      background-color: #f7f7f7 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-family: 'Open Sans', sans-serif;
+    "
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      bgcolor="#ffffff"
+      style="
+        width: 100% !important;
+        border-collapse: collapse !important;
+        max-width: 21cm !important;
+        margin: 0 auto !important;
+        padding: 15px !important;
+      "
+    >
+      <tbody>
+        <!-- header  -->
+        <tr>
+          <td style="padding: 20px 20px 0 20px; border-top: 20px solid #2843e0">
+            <h1 style="color: #343434; font-size: 30px">Invoice</h1>
+          </td>
+        </tr>
+        <!-- logo  -->
+        <tr>
+          <td style="padding: 0 20px 0 20px; display:flex;justify-content:flex-end">
+            <div
+              style="
+                width: 100px;
+                height: 100px;
+                background: #343434;
+                border-radius: 50%;
+                display: grid;
+                place-items: center;
+              "
+            >
+              <img src="./logo.png" style="width: 80%" alt="logo" />
+            </div>
+          </td>
+        </tr>
+        <!-- person info  -->
+        <tr>
+          <td style="padding: 15px 15px 0 15px">
+            <table width="100%">
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      border-bottom: 1px solid #dbdbdb;
+                      padding-bottom: 25px;
+                      display:flex;
+                      align-items:flex-start;
+                    "
+                  >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td style="font-size: 14px">
+                            <span style="display: block">From</span>
+                            <span
+                              style="
+                                display: block;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 19px;
+                                margin: 4px 0 5px 0;
+                              "
+                              >Business Name</span
+                            >
+                            <span style="display: block; margin-bottom: 7px"
+                              >name@bussiness.com</span
+                            >
+                            <span style="display: block">Street address</span>
+                            <span style="display: block; margin-bottom: 7px"
+                              >State, Country</span
+                            >
+                            <span style="display: block"
+                              >Phone:(123) 456 7890</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td
+                    style="
+                      border-bottom: 1px solid #dbdbdb;
+                      padding-bottom: 25px;
+                    "
+                  >
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td style="font-size: 14px">
+                            <span style="display: block">For</span>
+                            <span
+                              style="
+                                display: block;
+                                font-size: 18px;
+                                font-weight: 500;
+                                line-height: 19px;
+                                margin: 4px 0 5px 0;
+                              "
+                              >Client Name</span
+                            >
+                            <span style="display: block; margin-bottom: 7px"
+                              >name@client.com</span
+                            >
+                            <span style="display: block">Cliet address</span>
+                            <span style="display: block; margin-bottom: 7px"
+                              >State, Country</span
+                            >
+                            <span style="display: block"
+                              >Phone:(098) 765 4321</span
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- invoice info  -->
+        <tr>
+          <td style="padding: 25px 15px 25px 15px; font-size: 14px">
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td style="width: 60px; line-height: 20px">Number</td>
+                  <td style="line-height: 20px">INV0021</td>
+                </tr>
+                <tr>
+                  <td style="width: 60px; line-height: 20px">Date</td>
+                  <td style="line-height: 20px">Jun 12, 2018</td>
+                </tr>
+                <tr>
+                  <td style="width: 60px; line-height: 20px">Time</td>
+                  <td style="line-height: 20px">2 Days</td>
+                </tr>
+                <tr>
+                  <td style="width: 60px; line-height: 20px">Due</td>
+                  <td style="line-height: 20px">Jun 14, 2018</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- pricing  -->
+        <tr>
+          <td style="font-size: 14px; padding: 0 15px 0 15px">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <td
+                    style="
+                      width: 50%;
+                      color: #fff !important;
+                      text-align: left;
+                      line-height: 30px;
+                      padding-left: 7px;
+                      background: #2843e0;
+                    "
+                  >
+                    Description
+                  </td>
+                  <td
+                    style="
+                      text-align: right;
+                      width: 45px;
+                      color: #fff !important;
+                      line-height: 30px;
+                      background: #2843e0;
+                    "
+                  >
+                    Price
+                  </td>
+                  <td
+                    style="
+                      width: 100px;
+                      text-align: right;
+                      color: #fff !important;
+                      line-height: 30px;
+                      background: #2843e0;
+                    "
+                  >
+                    Qty
+                  </td>
+                  <td
+                    style="
+                      text-align: right;
+                      color: #fff !important;
+                      padding-right: 7px;
+                      background: #2843e0;
+                      line-height: 30px;
+                    "
+                  >
+                    Amount
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td style="text-align: right; line-height: 23px">$0.00</td>
+                  <td style="text-align: right; line-height: 23px">1</td>
+                  <td
+                    style="
+                      text-align: right;
+                      padding-right: 7px;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="text-align: right; line-height: 23px">$0.00</td>
+                  <td style="text-align: right; line-height: 23px">1</td>
+                  <td
+                    style="
+                      text-align: right;
+                      padding-right: 7px;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="text-align: right; line-height: 23px">$0.00</td>
+                  <td style="text-align: right; line-height: 23px">1</td>
+                  <td
+                    style="
+                      text-align: right;
+                      padding-right: 7px;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td style="text-align: right; line-height: 23px">$0.00</td>
+                  <td style="text-align: right; line-height: 23px">1</td>
+                  <td
+                    style="
+                      text-align: right;
+                      padding-right: 7px;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border-bottom: 1px solid #2843e0 !important"></td>
+                  <td
+                    style="
+                      text-align: right;
+                      border-bottom: 1px solid #2843e0 !important;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                  <td
+                    style="
+                      border-bottom: 1px solid #2843e0 !important;
+                      line-height: 23px;
+                      text-align: right;
+                    "
+                  >
+                    1
+                  </td>
+                  <td
+                    style="
+                      text-align: right;
+                      border-bottom: 1px solid #2843e0 !important;
+                      padding-right: 7px;
+                      line-height: 23px;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <!-- total -->
+                <tr style="text-align: right">
+                  <td colspan="2" style="padding: 10px 0 8px 0">Subtotal</td>
+                  <td colspan="2" style="padding-right: 7px">$0.00</td>
+                </tr>
+                <tr style="text-align: right">
+                  <td colspan="2" style="padding: 0 0 8px 0">Discount(0%)</td>
+                  <td colspan="2" style="padding-right: 7px">$0.00</td>
+                </tr>
+                <tr style="text-align: right">
+                  <td
+                    colspan="2"
+                    style="
+                      border-bottom: 1px solid #2843e0;
+                      padding: 0 0 10px 0;
+                    "
+                  >
+                    GST(5%)
+                  </td>
+                  <td
+                    colspan="2"
+                    style="border-bottom: 1px solid #2843e0; padding-right: 7px"
+                  >
+                    $0.00
+                  </td>
+                </tr>
+                <tr style="text-align: right">
+                  <td colspan="2" style="padding: 10px 0 5px 0">Total</td>
+                  <td colspan="2" style="padding-right: 7px">$0.00</td>
+                </tr>
+                <tr style="text-align: right; font-weight: 500">
+                  <td
+                    colspan="2"
+                    style="
+                      font-size: 18px;
+                      border-bottom: 1px solid #dbdbdb;
+                      padding-bottom: 28px;
+                    "
+                  >
+                    Balance Due
+                  </td>
+                  <td
+                    colspan="2"
+                    style="
+                      padding: 0 7px 28px;
+                      font-size: 18px;
+                      border-bottom: 1px solid #dbdbdb;
+                    "
+                  >
+                    $0.00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- footer  -->
+        <tr>
+          <td style="padding: 25px 15px 25px 15px">
+            <span style="display: block; padding-bottom: 6px">Notes</span>
+            <span style="display: block"
+              >Additional notes, payment instructions, etc.</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
